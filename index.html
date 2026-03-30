@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAITAN SHOP | شحن الألعاب</title>
     <style>
-        /* حركة الخلفية */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
@@ -21,79 +20,64 @@
             text-align: center;
             margin: 0;
             padding-bottom: 100px;
-            overflow-x: hidden;
         }
 
         header {
-            padding: 50px 20px;
+            padding: 40px 20px;
             background: rgba(0, 0, 0, 0.5);
             border-bottom: 3px solid #00d4ff;
             margin-bottom: 30px;
-            animation: fadeInDown 1s ease-out;
         }
 
         h1 { 
             color: #00d4ff; 
-            text-shadow: 0 0 20px #00d4ff, 0 0 40px #8A2BE2; 
-            font-size: 3.5em; 
+            text-shadow: 0 0 20px #00d4ff; 
+            font-size: 2.8em; 
             margin: 0;
-            letter-spacing: 2px;
         }
 
         .main-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 25px;
-            padding: 20px;
+            gap: 20px;
+            padding: 10px;
         }
 
-        /* تأثير الكروت */
         .price-card {
-            background: rgba(255, 255, 255, 0.07);
+            background: rgba(255, 255, 255, 0.05);
             border: 2px solid #8A2BE2;
-            border-radius: 25px;
-            padding: 25px;
-            width: 320px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
-            backdrop-filter: blur(15px);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            animation: fadeInUp 1s ease-out;
+            border-radius: 20px;
+            padding: 20px;
+            width: 330px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
         }
 
-        .price-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            border-color: #00d4ff;
-            box-shadow: 0 0 30px rgba(0, 212, 255, 0.4);
-        }
+        .price-card:hover { transform: translateY(-10px); border-color: #00d4ff; }
 
         .game-title { 
-            font-size: 1.8em; 
-            margin-bottom: 20px; 
+            font-size: 1.5em; 
+            margin-bottom: 15px; 
             color: #00d4ff;
-            border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
             padding-bottom: 10px;
         }
 
         .price-item { 
             display: flex; 
             justify-content: space-between; 
-            margin: 12px 0; 
-            font-size: 1.2em; 
-            background: rgba(255,255,255,0.05);
-            padding: 12px;
-            border-radius: 12px;
-            transition: 0.3s;
+            margin: 10px 0; 
+            font-size: 1em; 
+            background: rgba(255,255,255,0.03);
+            padding: 10px;
+            border-radius: 10px;
         }
 
-        .price-item:hover {
-            background: rgba(138, 43, 226, 0.2);
-            padding-right: 20px;
-        }
+        .cost { color: #00ff88; font-weight: bold; }
+        .special { color: #ff00ff; }
 
-        .cost { color: #00ff88; font-weight: bold; text-shadow: 0 0 10px rgba(0,255,136,0.5); }
-
-        /* زر الواتساب النابض */
         .whatsapp-btn {
             display: block;
             background: #25d366;
@@ -101,64 +85,52 @@
             text-decoration: none;
             padding: 15px;
             border-radius: 50px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
-            margin-top: 25px;
+            margin-top: 20px;
             transition: 0.3s;
-            box-shadow: 0 0 15px rgba(37, 211, 102, 0.4);
-            animation: pulse 2s infinite;
         }
 
-        .whatsapp-btn:hover {
-            background: #128c7e;
-            box-shadow: 0 0 25px rgba(37, 211, 102, 0.7);
-            transform: scale(1.05);
-        }
-
-        /* الحركات (Animations) */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-50px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-
+        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <header>
         <h1>TAITAN SHOP</h1>
-        <p style="color: #ff00ff; font-weight: bold;">افضل اسعار شحن الالعاب في مصر</p>
+        <p style="color: #00d4ff; font-weight: bold;">افضل اسعار شحن الالعاب في مصر</p>
     </header>
 
     <div class="main-container">
         
         <div class="price-card">
-            <div class="game-title">PUBG MOBILE</div>
+            <div class="game-title">عروض ببجي ID</div>
+            <div class="price-item"><span>الرويال باس (1-50)</span> <span class="cost">290 EGP</span></div>
+            <div class="price-item"><span>بطاقة النخبة (1-100)</span> <span class="cost">560 EGP</span></div>
+            <div class="price-item"><span>ELITE PASS PLUS</span> <span class="cost">1390 EGP</span></div>
+            <div class="price-item"><span>حزمة الشراء الاول</span> <span class="cost">55 EGP</span></div>
+            <div class="price-item"><span>حزمة الاسلحة</span> <span class="cost">155 EGP</span></div>
+            <div class="price-item"><span>القنبلة الخرافي</span> <span class="cost">250 EGP</span></div>
+            <div class="price-item"><span>برايم شهر واحد</span> <span class="cost">55 EGP</span></div>
+            <div class="price-item"><span>برايم بلس شهر</span> <span class="cost">475 EGP</span></div>
+            <div class="price-item special"><span>الصفقات الاسبوعية</span> <span class="cost">55 - 140 EGP</span></div>
+            <a href="https://wa.me/201032275035?text=اريد طلب عرض من عروض ببجي" class="whatsapp-btn">اطلب العرض الان</a>
+        </div>
+
+        <div class="price-card">
+            <div class="game-title">شدات PUBG UC</div>
             <div class="price-item"><span>60 UC</span> <span class="cost">45 EGP</span></div>
             <div class="price-item"><span>325 UC</span> <span class="cost">220 EGP</span></div>
             <div class="price-item"><span>660 UC</span> <span class="cost">435 EGP</span></div>
             <div class="price-item"><span>1800 UC</span> <span class="cost">1090 EGP</span></div>
             <div class="price-item"><span>3850 UC</span> <span class="cost">2150 EGP</span></div>
             <div class="price-item"><span>8100 UC</span> <span class="cost">4290 EGP</span></div>
-            <a href="https://wa.me/201032275035?text=اريد شحن ببجي موبايل" class="whatsapp-btn">اطلب ببجي الان</a>
+            <a href="https://wa.me/201032275035?text=اريد شحن شدات ببجي" class="whatsapp-btn">اشحن شدات الان</a>
         </div>
 
-        <div class="price-card" style="animation-delay: 0.2s;">
+        <div class="price-card">
             <div class="game-title">BLOOD STRIKE</div>
-            <div class="price-item"><span>50 Gold</span> <span class="cost">20 EGP</span></div>
             <div class="price-item"><span>100 Gold</span> <span class="cost">41 EGP</span></div>
-            <div class="price-item"><span>320 Gold</span> <span class="cost">125 EGP</span></div>
             <div class="price-item"><span>540 Gold</span> <span class="cost">210 EGP</span></div>
             <div class="price-item"><span>1100 Gold</span> <span class="cost">415 EGP</span></div>
             <div class="price-item"><span>2260 Gold</span> <span class="cost">830 EGP</span></div>
