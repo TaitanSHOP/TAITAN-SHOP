@@ -3,129 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAITAN SHOP | متجر الشحن الذكي Neon</title>
+    <title>TAITAN SHOP | نظام الشحن الذكي</title>
     <style>
-        /* حركة الخلفية */
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* حركة النيون RGB */
-        @keyframes rgbNeon {
-            0% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; }
-            33% { border-color: #8A2BE2; box-shadow: 0 0 10px #8A2BE2; }
-            66% { border-color: #00ff88; box-shadow: 0 0 10px #00ff88; }
-            100% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; }
-        }
+        /* كود النيون والمؤثرات اللي فاتت */
+        @keyframes gradientBG { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        @keyframes rgbNeon { 0% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; } 33% { border-color: #8A2BE2; box-shadow: 0 0 10px #8A2BE2; } 66% { border-color: #00ff88; box-shadow: 0 0 10px #00ff88; } 100% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; } }
         
-        @keyframes rgbText {
-            0% { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; }
-            33% { color: #8A2BE2; text-shadow: 0 0 15px #8A2BE2; }
-            66% { color: #00ff88; text-shadow: 0 0 15px #00ff88; }
-            100% { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; }
-        }
-
         body {
             background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #0f0c29);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
-            color: white;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding-bottom: 100px;
-            overflow-x: hidden;
+            color: white; font-family: Arial, sans-serif; text-align: center; margin: 0; padding-bottom: 100px;
         }
 
-        header {
-            padding: 50px 20px;
-            background: rgba(0, 0, 0, 0.6);
-            border-bottom: 3px solid #00d4ff;
-            margin-bottom: 40px;
-            animation: rgbNeon 5s infinite;
-        }
+        header { padding: 50px 20px; background: rgba(0, 0, 0, 0.6); border-bottom: 3px solid #00d4ff; margin-bottom: 40px; animation: rgbNeon 5s infinite; }
+        h1 { font-size: 3em; color: #00d4ff; text-shadow: 0 0 15px #00d4ff; }
 
-        h1 { 
-            font-size: 3.2em; 
-            margin: 0;
-            animation: rgbText 5s infinite;
-            letter-spacing: 2px;
-        }
-
-        .main-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-            padding: 10px;
-        }
-
+        .main-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 25px; padding: 10px; }
         .price-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 2px solid #8A2BE2;
-            border-radius: 25px;
-            padding: 30px;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-            backdrop-filter: blur(15px);
-            transition: 0.4s ease-out;
-            margin-bottom: 20px;
-            animation: rgbNeon 5s infinite;
+            background: rgba(255, 255, 255, 0.04); border: 2px solid #8A2BE2; border-radius: 25px;
+            padding: 30px; width: 320px; backdrop-filter: blur(15px); animation: rgbNeon 5s infinite;
         }
 
-        .price-card:hover { 
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
+        input, select {
+            width: 100%; padding: 15px; margin: 12px 0; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);
+            background: #101020; color: white; font-size: 1.1em; text-align: center;
         }
 
-        .game-title { 
-            font-size: 1.7em; 
-            margin-bottom: 25px; 
-            color: #fff;
-            text-shadow: 0 0 10px #fff;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 15px;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 15px;
-            margin: 12px 0;
-            border-radius: 12px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: #101020;
-            color: white;
-            font-size: 1.1em;
-            text-align: center;
-            transition: 0.3s;
-        }
-        
-        select:focus, input:focus {
-            border-color: #00d4ff;
-            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
-            outline: none;
-        }
+        /* تمييز خانة الـ ID الغلط */
+        .id-error { border: 2px solid #ff4b2b !important; background: rgba(255, 75, 43, 0.1) !important; }
 
         .order-btn {
-            color: white;
-            padding: 18px;
-            border-radius: 50px;
-            font-size: 1.4em;
-            font-weight: bold;
-            cursor: pointer;
-            border: 2px solid;
-            width: 100%;
-            margin-top: 20px;
-            transition: 0.3s ease-out;
-            background: rgba(0, 0, 0, 0.3);
-            animation: rgbNeon 5s infinite;
-        }
-
-        .order-btn:hover { 
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3); color: white; padding: 18px; border-radius: 50px;
+            font-size: 1.4em; font-weight: bold; cursor: pointer; border: 2px solid; width: 100%;
+            margin-top: 20px; animation: rgbNeon 5s infinite; transition: 0.3s;
         }
     </style>
 </head>
@@ -133,78 +44,60 @@
 
     <header>
         <h1>TAITAN SHOP</h1>
-        <p style="color: #fff; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px #fff;">اختار باقتك واشحن في ثواني</p>
+        <p>نظام التحقق الذكي من الهوية (ID Verify)</p>
     </header>
 
     <div class="main-container">
         
         <div class="price-card">
-            <div class="game-title">عروض ببجي ID</div>
-            <input type="text" id="offerID" placeholder="ادخل الايدي (ID)">
-            <select id="offerPack">
-                <option value="الرويال باس (1-50) - 290 ج">الرويال باس (1-50) - 290 ج</option>
-                <option value="بطاقة النخبة (1-100) - 560 ج">بطاقة النخبة (1-100) - 560 ج</option>
-                <option value="ELITE PASS PLUS - 1390 ج">ELITE PASS PLUS - 1390 ج</option>
-                <option value="برايم شهر واحد - 55 ج">برايم شهر واحد - 55 ج</option>
-                <option value="برايم بلس شهر - 475 ج">برايم بلس شهر - 475 ج</option>
-                <option value="حزمة الشراء الأول - 55 ج">حزمة الشراء الأول - 55 ج</option>
-                <option value="حزمة منتجات الاسلحة - 155 ج">حزمة منتجات الاسلحة - 155 ج</option>
-                <option value="القنبلة الخرافي - 250 ج">القنبلة الخرافي - 250 ج</option>
-            </select>
-            <button class="order-btn" onclick="sendOrder('ببجي عروض', 'offerID', 'offerPack')">اطلب الآن</button>
-        </div>
-
-        <div class="price-card">
-            <div class="game-title">شدات ببجي (UC)</div>
-            <input type="text" id="pubgID" placeholder="ادخل الايدي (ID)">
+            <div style="font-size: 1.5em; margin-bottom: 15px;">شدات ببجي (UC)</div>
+            <input type="number" id="pubgID" placeholder="ادخل ID الارقام فقط" oninput="validateDigits(this)">
             <select id="pubgPack">
                 <option value="60 شدة - 45 ج">60 UC - 45 EGP</option>
                 <option value="325 شدة - 220 ج">325 UC - 220 EGP</option>
                 <option value="660 شدة - 435 ج">660 UC - 435 EGP</option>
-                <option value="1800 شدة - 1090 ج">1800 UC - 1090 EGP</option>
             </select>
-            <button class="order-btn" onclick="sendOrder('ببجي شدات', 'pubgID', 'pubgPack')">اطلب الآن</button>
+            <button class="order-btn" onclick="checkAndSend('ببجي', 'pubgID', 'pubgPack', 8, 12)">اطلب الآن</button>
         </div>
 
         <div class="price-card">
-            <div class="game-title">فري فاير (💎)</div>
-            <input type="text" id="ffID" placeholder="ادخل الايدي (ID)">
+            <div style="font-size: 1.5em; margin-bottom: 15px;">فري فاير (💎)</div>
+            <input type="number" id="ffID" placeholder="ادخل ID الارقام فقط" oninput="validateDigits(this)">
             <select id="ffPack">
                 <option value="100 جوهرة - 50 ج">100 💎 - 50 EGP</option>
                 <option value="210 جوهرة - 105 ج">210 💎 - 105 EGP</option>
-                <option value="310+ جوهرة - 160 ج">310+ 💎 - 160 EGP</option>
                 <option value="520+10 جواهر - 260 ج">520+10 💎 - 260 EGP</option>
             </select>
-            <button class="order-btn" onclick="sendOrder('فري فاير', 'ffID', 'ffPack')">اطلب الآن</button>
-        </div>
-
-        <div class="price-card">
-            <div class="game-title">بلود سترايك (ID)</div>
-            <input type="text" id="bsID" placeholder="ادخل الايدي (ID)">
-            <select id="bsPack">
-                <option value="100 ذهب - 41 ج">100 Gold - 41 EGP</option>
-                <option value="540 ذهب - 210 ج">540 Gold - 210 EGP</option>
-                <option value="سترايك باس - 180 ج">Strike Pass - 180 EGP</option>
-            </select>
-            <button class="order-btn" onclick="sendOrder('بلود سترايك', 'bsID', 'bsPack')">اطلب الآن</button>
+            <button class="order-btn" onclick="checkAndSend('فري فاير', 'ffID', 'ffPack', 8, 11)">اطلب الآن</button>
         </div>
 
     </div>
 
     <script>
-        function sendOrder(gameName, idField, packField) {
-            var id = document.getElementById(idField).value;
+        // وظيفة تمنع كتابة أي حاجة غير الأرقام
+        function validateDigits(input) {
+            input.value = input.value.replace(/[^0-9]/g, '');
+        }
+
+        // وظيفة الفحص الذكي قبل الإرسال
+        function checkAndSend(game, idField, packField, minLen, maxLen) {
+            var idInput = document.getElementById(idField);
+            var idValue = idInput.value;
             var pack = document.getElementById(packField).value;
-            
-            if(id == "") {
-                alert("من فضلك اكتب الايدي بتاعك الأول");
+
+            // الفحص: لو فاضي أو أصغر من الحد الأدنى للعبة
+            if (idValue.length < minLen || idValue.length > maxLen) {
+                idInput.classList.add('id-error');
+                alert("خطأ في الـ ID! ايدي لعبة " + game + " لازم يكون بين " + minLen + " و " + maxLen + " رقم.");
                 return;
             }
 
-            var message = "اهلا تايتان شوب، اريد طلب شحن:%0A" + 
-                          "*اللعبة:* " + gameName + "%0A" +
+            // لو صح، شيل علامة الخطأ وابعت
+            idInput.classList.remove('id-error');
+            var message = "اهلا تايتان شوب، طلب شحن مؤكد:%0A" + 
+                          "*اللعبة:* " + game + "%0A" +
                           "*الباقة:* " + pack + "%0A" +
-                          "*الايدي:* " + id;
+                          "*الايدي المفحوص:* " + idValue;
 
             window.open("https://wa.me/201032275035?text=" + message, "_blank");
         }
