@@ -3,12 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAITAN SHOP | متجر الشحن الذكي</title>
+    <title>TAITAN SHOP | متجر الشحن الذكي Neon</title>
     <style>
+        /* حركة الخلفية */
         @keyframes gradientBG {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+
+        /* حركة النيون RGB */
+        @keyframes rgbNeon {
+            0% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; }
+            33% { border-color: #8A2BE2; box-shadow: 0 0 10px #8A2BE2; }
+            66% { border-color: #00ff88; box-shadow: 0 0 10px #00ff88; }
+            100% { border-color: #00d4ff; box-shadow: 0 0 10px #00d4ff; }
+        }
+        
+        @keyframes rgbText {
+            0% { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; }
+            33% { color: #8A2BE2; text-shadow: 0 0 15px #8A2BE2; }
+            66% { color: #00ff88; text-shadow: 0 0 15px #00ff88; }
+            100% { color: #00d4ff; text-shadow: 0 0 15px #00d4ff; }
         }
 
         body {
@@ -20,80 +36,126 @@
             text-align: center;
             margin: 0;
             padding-bottom: 100px;
+            overflow-x: hidden;
         }
 
         header {
-            padding: 40px 20px;
-            background: rgba(0, 0, 0, 0.5);
+            padding: 50px 20px;
+            background: rgba(0, 0, 0, 0.6);
             border-bottom: 3px solid #00d4ff;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            animation: rgbNeon 5s infinite;
         }
 
-        h1 { color: #00d4ff; text-shadow: 0 0 20px #00d4ff; font-size: 2.8em; margin: 0; }
+        h1 { 
+            font-size: 3.2em; 
+            margin: 0;
+            animation: rgbText 5s infinite;
+            letter-spacing: 2px;
+        }
 
         .main-container {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 25px;
             padding: 10px;
         }
 
         .price-card {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.04);
             border: 2px solid #8A2BE2;
-            border-radius: 20px;
-            padding: 25px;
+            border-radius: 25px;
+            padding: 30px;
             width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
-            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+            backdrop-filter: blur(15px);
+            transition: 0.4s ease-out;
+            margin-bottom: 20px;
+            animation: rgbNeon 5s infinite;
         }
 
-        .price-card:hover { transform: translateY(-10px); border-color: #00d4ff; }
+        .price-card:hover { 
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.3);
+        }
 
-        .game-title { font-size: 1.6em; margin-bottom: 20px; color: #00d4ff; }
+        .game-title { 
+            font-size: 1.7em; 
+            margin-bottom: 25px; 
+            color: #fff;
+            text-shadow: 0 0 10px #fff;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
 
         select, input {
             width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 10px;
-            border: 1px solid #8A2BE2;
-            background: #1a1a2e;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #101020;
             color: white;
-            font-size: 1em;
+            font-size: 1.1em;
             text-align: center;
+            transition: 0.3s;
+        }
+        
+        select:focus, input:focus {
+            border-color: #00d4ff;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+            outline: none;
         }
 
         .order-btn {
-            background: #25d366;
             color: white;
-            padding: 15px;
+            padding: 18px;
             border-radius: 50px;
-            font-size: 1.2em;
+            font-size: 1.4em;
             font-weight: bold;
             cursor: pointer;
-            border: none;
+            border: 2px solid;
             width: 100%;
-            margin-top: 15px;
-            transition: 0.3s;
+            margin-top: 20px;
+            transition: 0.3s ease-out;
+            background: rgba(0, 0, 0, 0.3);
+            animation: rgbNeon 5s infinite;
         }
 
-        .order-btn:hover { background: #128c7e; transform: scale(1.05); }
+        .order-btn:hover { 
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.1);
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>TAITAN SHOP</h1>
-        <p style="color: #00d4ff; font-weight: bold;">اختار باقتك واشحن في ثواني</p>
+        <p style="color: #fff; font-weight: bold; font-size: 1.1em; text-shadow: 0 0 5px #fff;">اختار باقتك واشحن في ثواني</p>
     </header>
 
     <div class="main-container">
         
         <div class="price-card">
-            <div class="game-title">ببجي موبايل (ID)</div>
+            <div class="game-title">عروض ببجي ID</div>
+            <input type="text" id="offerID" placeholder="ادخل الايدي (ID)">
+            <select id="offerPack">
+                <option value="الرويال باس (1-50) - 290 ج">الرويال باس (1-50) - 290 ج</option>
+                <option value="بطاقة النخبة (1-100) - 560 ج">بطاقة النخبة (1-100) - 560 ج</option>
+                <option value="ELITE PASS PLUS - 1390 ج">ELITE PASS PLUS - 1390 ج</option>
+                <option value="برايم شهر واحد - 55 ج">برايم شهر واحد - 55 ج</option>
+                <option value="برايم بلس شهر - 475 ج">برايم بلس شهر - 475 ج</option>
+                <option value="حزمة الشراء الأول - 55 ج">حزمة الشراء الأول - 55 ج</option>
+                <option value="حزمة منتجات الاسلحة - 155 ج">حزمة منتجات الاسلحة - 155 ج</option>
+                <option value="القنبلة الخرافي - 250 ج">القنبلة الخرافي - 250 ج</option>
+            </select>
+            <button class="order-btn" onclick="sendOrder('ببجي عروض', 'offerID', 'offerPack')">اطلب الآن</button>
+        </div>
+
+        <div class="price-card">
+            <div class="game-title">شدات ببجي (UC)</div>
             <input type="text" id="pubgID" placeholder="ادخل الايدي (ID)">
             <select id="pubgPack">
                 <option value="60 شدة - 45 ج">60 UC - 45 EGP</option>
@@ -105,23 +167,12 @@
         </div>
 
         <div class="price-card">
-            <div class="game-title">عروض ببجي</div>
-            <input type="text" id="offerID" placeholder="ادخل الايدي (ID)">
-            <select id="offerPack">
-                <option value="الرويال باس (1-50) - 290 ج">الرويال باس (1-50) - 290 ج</option>
-                <option value="بطاقة النخبة (1-100) - 560 ج">بطاقة النخبة (1-100) - 560 ج</option>
-                <option value="برايم بلس شهر - 475 ج">برايم بلس شهر - 475 ج</option>
-                <option value="حزمة الشراء الاول - 55 ج">حزمة الشراء الاول - 55 ج</option>
-            </select>
-            <button class="order-btn" onclick="sendOrder('ببجي عروض', 'offerID', 'offerPack')">اطلب الآن</button>
-        </div>
-
-        <div class="price-card">
             <div class="game-title">فري فاير (💎)</div>
             <input type="text" id="ffID" placeholder="ادخل الايدي (ID)">
             <select id="ffPack">
                 <option value="100 جوهرة - 50 ج">100 💎 - 50 EGP</option>
                 <option value="210 جوهرة - 105 ج">210 💎 - 105 EGP</option>
+                <option value="310+ جوهرة - 160 ج">310+ 💎 - 160 EGP</option>
                 <option value="520+10 جواهر - 260 ج">520+10 💎 - 260 EGP</option>
             </select>
             <button class="order-btn" onclick="sendOrder('فري فاير', 'ffID', 'ffPack')">اطلب الآن</button>
