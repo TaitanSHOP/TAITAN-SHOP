@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAITAN SHOP | ‘Õ‰ «·√·⁄«»</title>
+    <style>
+        body {
+            background: #0f0c29; 
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 100px;
+        }
+        header {
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-bottom: 3px solid #00d4ff;
+            margin-bottom: 30px;
+        }
+        h1 { 
+            color: #00d4ff; 
+            text-shadow: 0 0 20px #8A2BE2; 
+            font-size: 3.5em; 
+            margin: 0;
+        }
+        .subtitle { color: #ff00ff; font-weight: bold; margin-top: 10px; font-size: 1.2em; }
+        
+        .main-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .price-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #8A2BE2;
+            border-radius: 20px;
+            padding: 25px;
+            width: 350px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+        .price-card:hover {
+            border-color: #00d4ff;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+        }
+        
+        .game-title { 
+            font-size: 1.8em; 
+            margin-bottom: 20px; 
+            color: #00d4ff;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
+        }
+
+        .price-item { 
+            display: flex; 
+            justify-content: space-between; 
+            margin: 10px 0; 
+            font-size: 1.1em; 
+            background: rgba(255,255,255,0.03);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+        .price-item:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-right: 3px solid #ff00ff;
+        }
+        .cost { color: #00ff88; font-weight: bold; }
+        .pass-item { border: 1px dashed #ff00ff; background: rgba(255, 0, 255, 0.05); }
+
+        .whatsapp-fixed {
+            position: fixed;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 15px 50px;
+            border-radius: 50px;
+            font-size: 1.5em;
+            font-weight: bold;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            transition: 0.3s;
+            border: 2px solid transparent;
+        }
+        .whatsapp-fixed:hover { 
+            background: #128c7e; 
+            transform: translateX(-50%) translateY(-5px);
+            border-color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>TAITAN SHOP</h1>
+        <div class="subtitle">‘Õ‰ »»ÃÌ Ê»·Êœ ” —«Ìﬂ »«›÷· «·«”⁄«— - „⁄ „œ</div>
+    </header>
+
+    <div class="main-container">
+        
+        <div class="price-card">
+            <div class="game-title">PUBG MOBILE - ID</div>
+            <div class="price-item"><span>60 UC</span> <span class="cost">45 EGP</span></div>
+            <div class="price-item"><span>325 UC</span> <span class="cost">220 EGP</span></div>
+            <div class="price-item"><span>660 UC</span> <span class="cost">435 EGP</span></div>
+            <div class="price-item"><span>1800 UC</span> <span class="cost">1090 EGP</span></div>
+            <div class="price-item"><span>3850 UC</span> <span class="cost">2150 EGP</span></div>
+            <div class="price-item"><span>8100 UC</span> <span class="cost">4290 EGP</span></div>
+        </div>
+
+        <div class="price-card">
+            <div class="game-title">BLOOD STRIKE - MENA</div>
+            <div class="price-item"><span>50 Gold</span> <span class="cost">20 EGP</span></div>
+            <div class="price-item"><span>100 Gold</span> <span class="cost">41 EGP</span></div>
+            <div class="price-item"><span>320 Gold</span> <span class="cost">125 EGP</span></div>
+            <div class="price-item"><span>540 Gold</span> <span class="cost">210 EGP</span></div>
+            <div class="price-item"><span>1100 Gold</span> <span class="cost">415 EGP</span></div>
+            <div class="price-item"><span>2260 Gold</span> <span class="cost">830 EGP</span></div>
+            <div class="price-item"><span>5800 Gold</span> <span class="cost">2050 EGP</span></div>
+            <div class="price-item pass-item"><span>Strike Pass</span> <span class="cost">180 EGP</span></div>
+            <div class="price-item pass-item"><span>Pass Premium</span> <span class="cost">395 EGP</span></div>
+        </div>
+
+    </div>
+
+    <a href="https://wa.me/201032275035?text=Hello Taitan Shop, I want to order.." class="whatsapp-fixed" target="_blank">
+        «ÿ·» «·«‰ ⁄»— Ê« ”«»
+    </a>
+
+</body>
+</html>
