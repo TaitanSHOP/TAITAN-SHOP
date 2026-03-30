@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAITAN SHOP | شحن مباشر</title>
-    <meta name="description" content="Taitan Shop - أفضل متجر شحن شدات ببجي وجواهر بلود سترايك في مصر بأرخص الأسعار وفوري.">
+    <title>TAITAN SHOP | شحن الألعاب</title>
     <style>
         body {
             background: #0f0c29; 
@@ -13,122 +12,108 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
-            padding-bottom: 50px;
+            padding-bottom: 100px;
         }
-        header { padding: 30px; background: rgba(0,0,0,0.4); border-bottom: 3px solid #00d4ff; }
-        h1 { color: #00d4ff; text-shadow: 0 0 20px #8A2BE2; margin: 0; font-size: 2.5em; }
-
-        /* صندوق الطلب */
-        .order-box {
+        header {
+            padding: 40px 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-bottom: 3px solid #00d4ff;
+            margin-bottom: 30px;
+        }
+        h1 { 
+            color: #00d4ff; 
+            text-shadow: 0 0 20px #8A2BE2; 
+            font-size: 3em; 
+            margin: 0;
+        }
+        .subtitle { color: #ff00ff; font-weight: bold; margin-top: 10px; }
+        
+        .main-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 15px;
+        }
+        
+        .price-card {
             background: rgba(255, 255, 255, 0.05);
             border: 2px solid #8A2BE2;
             border-radius: 20px;
-            padding: 30px;
-            max-width: 450px;
-            margin: 40px auto;
-            backdrop-filter: blur(10px);
+            padding: 20px;
+            width: 320px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
         }
         
-        label { display: block; text-align: right; margin-right: 20px; margin-top: 15px; color: #00d4ff; font-weight: bold; }
-        
-        input, select {
-            width: 90%;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 12px;
-            border: 1px solid #8A2BE2;
-            background: #1a1a2e;
-            color: white;
-            font-size: 1.1em;
-            text-align: right;
+        .game-title { 
+            font-size: 1.6em; 
+            margin-bottom: 15px; 
+            color: #00d4ff;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 10px;
         }
-        
-        .order-btn {
+
+        .price-item { 
+            display: flex; 
+            justify-content: space-between; 
+            margin: 8px 0; 
+            font-size: 1.1em; 
+            background: rgba(255,255,255,0.03);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .cost { color: #00ff88; font-weight: bold; }
+        .pass-item { border: 1px dashed #ff00ff; background: rgba(255, 0, 255, 0.05); }
+
+        .whatsapp-btn {
+            display: block;
             background: #25d366;
             color: white;
-            padding: 18px;
+            text-decoration: none;
+            padding: 15px;
             border-radius: 50px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: bold;
-            cursor: pointer;
-            border: none;
-            width: 95%;
-            margin-top: 30px;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+            margin-top: 20px;
             transition: 0.3s;
         }
-        .order-btn:hover { background: #128c7e; transform: scale(1.02); }
+        .whatsapp-btn:hover { background: #128c7e; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
     <header>
         <h1>TAITAN SHOP</h1>
-        <p>اطلب شحنك الان واستلم في ثواني</p>
+        <div class="subtitle">شحن ببجي وبلود سترايك بافضل الاسعار في مصر</div>
     </header>
 
-    <div class="order-box">
-        <h3>تفاصيل طلب الشحن</h3>
+    <div class="main-container">
         
-        <label>الايدي (ID):</label>
-        <input type="text" id="gameID" placeholder="ادخل الايدي الخاص بك">
-        
-        <label>الاسم في اللعبة:</label>
-        <input type="text" id="gameName" placeholder="اكتب اسمك في اللعبة">
-        
-        <label>اختار اللعبة:</label>
-        <select id="gameType">
-            <option value="ببجي موبايل">ببجي موبايل</option>
-            <option value="بلود سترايك">بلود سترايك</option>
-        </select>
+        <div class="price-card">
+            <div class="game-title">PUBG MOBILE</div>
+            <div class="price-item"><span>60 UC</span> <span class="cost">45 EGP</span></div>
+            <div class="price-item"><span>325 UC</span> <span class="cost">220 EGP</span></div>
+            <div class="price-item"><span>660 UC</span> <span class="cost">435 EGP</span></div>
+            <div class="price-item"><span>1800 UC</span> <span class="cost">1090 EGP</span></div>
+            <div class="price-item"><span>3850 UC</span> <span class="cost">2150 EGP</span></div>
+            <div class="price-item"><span>8100 UC</span> <span class="cost">4290 EGP</span></div>
+            <a href="https://wa.me/201032275035?text=اريد شحن ببجي موبايل" class="whatsapp-btn">اطلب ببجي الان</a>
+        </div>
 
-        <label>اختار الكمية والسعر:</label>
-        <select id="amount">
-            <optgroup label="اسعار ببجي">
-                <option value="60 شدة - 45 ج.م">60 شدة - 45 ج.م</option>
-                <option value="325 شدة - 220 ج.م">325 شدة - 220 ج.م</option>
-                <option value="660 شدة - 435 ج.م">660 شدة - 435 ج.م</option>
-                <option value="1800 شدة - 1090 ج.م">1800 شدة - 1090 ج.م</option>
-                <option value="3850 شدة - 2150 ج.م">3850 شدة - 2150 ج.م</option>
-                <option value="8100 شدة - 4290 ج.م">8100 شدة - 4290 ج.م</option>
-            </optgroup>
-            <optgroup label="اسعار بلود سترايك">
-                <option value="100 ذهب - 41 ج.م">100 ذهب - 41 ج.م</option>
-                <option value="540 ذهب - 210 ج.m">540 ذهب - 210 ج.m</option>
-                <option value="سترايك باس - 180 ج.m">سترايك باس - 180 ج.m</option>
-            </optgroup>
-        </select>
+        <div class="price-card">
+            <div class="game-title">BLOOD STRIKE</div>
+            <div class="price-item"><span>50 Gold</span> <span class="cost">20 EGP</span></div>
+            <div class="price-item"><span>100 Gold</span> <span class="cost">41 EGP</span></div>
+            <div class="price-item"><span>320 Gold</span> <span class="cost">125 EGP</span></div>
+            <div class="price-item"><span>540 Gold</span> <span class="cost">210 EGP</span></div>
+            <div class="price-item"><span>1100 Gold</span> <span class="cost">415 EGP</span></div>
+            <div class="price-item"><span>2260 Gold</span> <span class="cost">830 EGP</span></div>
+            <div class="price-item pass-item"><span>Strike Pass</span> <span class="cost">180 EGP</span></div>
+            <a href="https://wa.me/201032275035?text=اريد شحن بلود سترايك" class="whatsapp-btn">اطلب بلود الان</a>
+        </div>
 
-        <button class="order-btn" onclick="sendOrder()">ارسال الطلب عبر واتساب</button>
     </div>
-
-    <script>
-        function sendOrder() {
-            var id = document.getElementById('gameID').value;
-            var name = document.getElementById('gameName').value;
-            var game = document.getElementById('gameType').value;
-            var price = document.getElementById('amount').value;
-            
-            if(id == "" || name == "") {
-                alert("من فضلك اكتب الايدي واسمك عشان نعرف نشحنلك!");
-                return;
-            }
-
-            // الرسالة اللي هتوصلك على الواتساب
-            var message = "اهلا تايتان شوب، اريد طلب شحن:%0A" + 
-                          "-----------------------%0A" +
-                          "*اللعبة:* " + game + "%0A" +
-                          "*الكمية:* " + price + "%0A" +
-                          "*الايدي:* " + id + "%0A" +
-                          "*الاسم:* " + name + "%0A" +
-                          "-----------------------%0A" +
-                          "بانتظار اتمام الطلب..";
-
-            // فتح الواتساب
-            window.open("https://wa.me/201032275035?text=" + message, "_blank");
-        }
-    </script>
 
 </body>
 </html>
